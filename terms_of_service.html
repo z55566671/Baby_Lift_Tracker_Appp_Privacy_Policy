@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Baby Life Tracker 使用條款 / Terms of Service"
+    />
+    <meta
+      name="keywords"
+      content="Baby Life Tracker, Terms of Service, 使用條款"
+    />
+    <title>Baby Life Tracker - 使用條款 / Terms of Service</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #ffb6c1;
+        --secondary-color: #b0e0e6;
+        --accent-color: #ffd700;
+        --text-color: #333333;
+        --text-light: #666666;
+        --bg-color: #fff8f0;
+        --section-bg: #ffffff;
+        --border-color: #e0e0e0;
+        --link-color: #4a90e2;
+        --link-hover: #357abd;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Microsoft JhengHei", "PingFang TC", "Helvetica Neue", Arial,
+          sans-serif;
+        line-height: 1.8;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      @media (max-width: 767px) {
+        .container {
+          padding: 16px;
+        }
+        body {
+          font-size: 16px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .container {
+          padding: 24px;
+        }
+        body {
+          font-size: 17px;
+        }
+      }
+
+      @media (min-width: 1025px) {
+        .container {
+          padding: 40px;
+        }
+        body {
+          font-size: 18px;
+        }
+      }
+
+      .header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        padding: 40px 20px;
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 767px) {
+        .header {
+          padding: 30px 16px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 767px) {
+        .header h1 {
+          font-size: 1.8em;
+        }
+      }
+
+      .header .subtitle {
+        font-size: 1.2em;
+        opacity: 0.95;
+      }
+
+      @media (max-width: 767px) {
+        .header .subtitle {
+          font-size: 1em;
+        }
+      }
+
+      .language-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: white;
+        border: 2px solid var(--primary-color);
+        border-radius: 25px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-color);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .language-toggle:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 767px) {
+        .language-toggle {
+          top: 10px;
+          right: 10px;
+          padding: 6px 12px;
+          font-size: 13px;
+          min-height: 40px;
+        }
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .back-to-top:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      .back-to-top.show {
+        display: flex;
+      }
+
+      @media (max-width: 767px) {
+        .back-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 44px;
+          height: 44px;
+          font-size: 20px;
+        }
+      }
+
+      .content {
+        background: var(--section-bg);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 767px) {
+        .content {
+          padding: 24px 20px;
+          border-radius: 8px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .intro {
+        background: linear-gradient(135deg, #fff5f5, #f0f8ff);
+        padding: 30px;
+        border-radius: 10px;
+        border-left: 4px solid var(--primary-color);
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 767px) {
+        .intro {
+          padding: 20px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .intro p {
+        margin-bottom: 15px;
+        line-height: 1.9;
+      }
+
+      .intro p:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        color: var(--text-color);
+        font-size: 1.8em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid var(--primary-color);
+        font-weight: 600;
+      }
+
+      @media (max-width: 767px) {
+        h2 {
+          font-size: 1.5em;
+          margin-top: 30px;
+          margin-bottom: 16px;
+        }
+      }
+
+      h3 {
+        color: var(--text-color);
+        font-size: 1.4em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 767px) {
+        h3 {
+          font-size: 1.2em;
+          margin-top: 24px;
+          margin-bottom: 12px;
+        }
+      }
+
+      h4 {
+        color: var(--text-color);
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 767px) {
+        h4 {
+          font-size: 1.1em;
+          margin-top: 18px;
+          margin-bottom: 10px;
+        }
+      }
+
+      p {
+        margin-bottom: 15px;
+        line-height: 1.9;
+        text-align: justify;
+      }
+
+      @media (max-width: 767px) {
+        p {
+          text-align: left;
+          margin-bottom: 12px;
+        }
+      }
+
+      ul,
+      ol {
+        margin-left: 25px;
+        margin-bottom: 20px;
+        padding-left: 5px;
+      }
+
+      @media (max-width: 767px) {
+        ul,
+        ol {
+          margin-left: 20px;
+          margin-bottom: 16px;
+        }
+      }
+
+      li {
+        margin-bottom: 12px;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 767px) {
+        li {
+          margin-bottom: 10px;
+        }
+      }
+
+      .lang-section {
+        margin-bottom: 50px;
+      }
+
+      @media (max-width: 767px) {
+        .lang-section {
+          margin-bottom: 40px;
+        }
+      }
+
+      .lang-divider {
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--primary-color),
+          transparent
+        );
+        margin: 40px 0;
+      }
+
+      @media (max-width: 767px) {
+        .lang-divider {
+          margin: 30px 0;
+        }
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        border-bottom: 1px solid transparent;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+        border-bottom-color: var(--link-hover);
+      }
+
+      .contact-info {
+        background: linear-gradient(135deg, #fff5f5, #f0f8ff);
+        padding: 25px;
+        border-radius: 10px;
+        margin-top: 30px;
+        border-left: 4px solid var(--secondary-color);
+      }
+
+      @media (max-width: 767px) {
+        .contact-info {
+          padding: 20px;
+          margin-top: 24px;
+        }
+      }
+
+      .contact-info strong {
+        color: var(--text-color);
+        font-size: 1.1em;
+      }
+
+      .effective-date {
+        text-align: center;
+        padding: 20px;
+        color: var(--text-light);
+        font-style: italic;
+        margin-top: 40px;
+        border-top: 2px solid var(--border-color);
+      }
+
+      @media (max-width: 767px) {
+        .effective-date {
+          padding: 16px;
+          margin-top: 30px;
+        }
+      }
+
+      body:not(.lang-en) .lang-zh {
+        display: block !important;
+      }
+
+      body:not(.lang-en) .lang-en {
+        display: none !important;
+      }
+
+      body.lang-en .lang-zh {
+        display: none !important;
+      }
+
+      body.lang-en .lang-en {
+        display: block !important;
+      }
+
+      body:not(.lang-en) .language-toggle .lang-zh {
+        display: inline !important;
+      }
+
+      body:not(.lang-en) .language-toggle .lang-en {
+        display: none !important;
+      }
+
+      body.lang-en .language-toggle .lang-zh {
+        display: none !important;
+      }
+
+      body.lang-en .language-toggle .lang-en {
+        display: inline !important;
+      }
+
+      strong {
+        color: var(--text-color);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="language-toggle" id="langToggle" onclick="toggleLanguage()">
+      <span class="lang-zh">English</span>
+      <span class="lang-en">中文</span>
+    </button>
+
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="返回頂部">
+      ↑
+    </button>
+
+    <div class="header">
+      <h1 class="lang-zh">Baby Life Tracker 使用條款</h1>
+      <h1 class="lang-en">Baby Life Tracker Terms of Service</h1>
+      <div class="subtitle lang-zh">請仔細閱讀以下條款</div>
+      <div class="subtitle lang-en">
+        Please read the following terms carefully
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <div class="intro">
+          <p class="lang-zh">
+            歡迎使用「Baby Life
+            Tracker」（以下簡稱「本應用程式」或「本服務」）。本使用條款（以下簡稱「本條款」）規定了獨立開發者
+            AsiaDJ（以下簡稱「開發者」或「我們」）與使用本應用程式的用戶（以下簡稱「用戶」或「您」）之間的權利和義務。
+          </p>
+          <p class="lang-zh">
+            使用本應用程式即表示您同意遵守本條款。如果您不同意本條款的任何部分，請勿使用本應用程式。
+          </p>
+          <p class="lang-en">
+            Welcome to "Baby Life Tracker" (hereinafter referred to as the
+            "Application" or the "Service"). These Terms of Service (hereinafter
+            referred to as the "Terms") govern the rights and obligations
+            between independent developer AsiaDJ (hereinafter referred to as
+            "Developer" or "We") and users who use the Application (hereinafter
+            referred to as "User" or "You").
+          </p>
+          <p class="lang-en">
+            By using the Application, you agree to be bound by these Terms. If
+            you do not agree to any part of these Terms, please do not use the
+            Application.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>1. 服務說明</h2>
+          <p>
+            本應用程式是一個用於記錄和追蹤寶寶日常生活資訊的服務，包括但不限於：
+          </p>
+          <ul>
+            <li>記錄寶寶的基本資訊（姓名、性別、出生日期等）；</li>
+            <li>記錄各種活動（如餵奶、換尿布、睡眠等）；</li>
+            <li>上傳和儲存寶寶的照片；</li>
+            <li>多裝置同步功能，使您可以在不同裝置上存取您的資料；</li>
+            <li>離線記錄功能，即使沒有網路連線也能記錄資訊；</li>
+            <li>統計和分析功能，幫助您了解寶寶的生活模式；</li>
+            <li>未來可能推出的社群功能（如發文、按讚、留言等）。</li>
+          </ul>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>1. Service Description</h2>
+          <p>
+            The Application is a service for recording and tracking your baby's
+            daily life information, including but not limited to:
+          </p>
+          <ul>
+            <li>
+              Recording baby's basic information (name, gender, date of birth,
+              etc.);
+            </li>
+            <li>
+              Recording various activities (such as feeding, diaper changes,
+              sleep, etc.);
+            </li>
+            <li>Uploading and storing baby's photos;</li>
+            <li>
+              Multi-device synchronization functionality, enabling you to access
+              your data on different devices;
+            </li>
+            <li>
+              Offline recording functionality, allowing you to record
+              information even without network connection;
+            </li>
+            <li>
+              Statistics and analysis features to help you understand your
+              baby's life patterns;
+            </li>
+            <li>
+              Future social features that may be introduced (such as posting,
+              liking, commenting, etc.).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>2. 用戶帳號和註冊</h2>
+          <h3>2.1. 帳號註冊</h3>
+          <p>要使用本服務，您需要創建一個帳號。您可以透過以下方式註冊：</p>
+          <ul>
+            <li>電子郵件地址和密碼；</li>
+            <li>Google 帳號登入；</li>
+            <li>Apple 帳號登入。</li>
+          </ul>
+
+          <h3>2.2. 帳號安全</h3>
+          <p>您有責任維護帳號的安全性，包括但不限於：</p>
+          <ul>
+            <li>妥善保管您的登入憑證（電子郵件、密碼等）；</li>
+            <li>不得將您的帳號分享給他人使用；</li>
+            <li>如發現帳號被未經授權使用，應立即通知我們。</li>
+          </ul>
+
+          <h3>2.3. 帳號終止</h3>
+          <p>
+            您可以隨時刪除您的帳號。刪除帳號後，您的個人資料和記錄將被刪除或匿名化，除非法律要求我們保留某些資訊。
+          </p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>2. User Account and Registration</h2>
+          <h3>2.1. Account Registration</h3>
+          <p>
+            To use the Service, you need to create an account. You can register
+            through the following methods:
+          </p>
+          <ul>
+            <li>Email address and password;</li>
+            <li>Google account login;</li>
+            <li>Apple account login.</li>
+          </ul>
+
+          <h3>2.2. Account Security</h3>
+          <p>
+            You are responsible for maintaining the security of your account,
+            including but not limited to:
+          </p>
+          <ul>
+            <li>
+              Keeping your login credentials (email, password, etc.) secure;
+            </li>
+            <li>Not sharing your account with others;</li>
+            <li>
+              Notifying us immediately if you discover unauthorized use of your
+              account.
+            </li>
+          </ul>
+
+          <h3>2.3. Account Termination</h3>
+          <p>
+            You may delete your account at any time. After account deletion,
+            your personal data and records will be deleted or anonymized, unless
+            we are required by law to retain certain information.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>3. 用戶行為規範</h2>
+          <p>使用本服務時，您同意：</p>
+          <ul>
+            <li>僅將本服務用於合法目的；</li>
+            <li>
+              不得使用本服務從事任何違法、有害、威脅、辱罵、騷擾、誹謗、粗俗、淫穢或其他令人反感的活動；
+            </li>
+            <li>
+              不得上傳、發布或傳輸任何包含病毒、惡意軟體或其他有害代碼的內容；
+            </li>
+            <li>不得試圖未經授權存取本服務的系統或網路；</li>
+            <li>不得干擾或中斷本服務的運作；</li>
+            <li>
+              不得使用自動化工具（如機器人、爬蟲等）存取本服務，除非獲得我們的明確許可；
+            </li>
+            <li>不得複製、修改、分發、出售或出租本服務的任何部分；</li>
+            <li>尊重其他用戶的權利和隱私。</li>
+          </ul>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>3. User Conduct</h2>
+          <p>When using the Service, you agree to:</p>
+          <ul>
+            <li>Use the Service only for lawful purposes;</li>
+            <li>
+              Not use the Service to engage in any illegal, harmful,
+              threatening, abusive, harassing, defamatory, vulgar, obscene, or
+              otherwise objectionable activities;
+            </li>
+            <li>
+              Not upload, post, or transmit any content containing viruses,
+              malware, or other harmful code;
+            </li>
+            <li>
+              Not attempt to gain unauthorized access to the Service's systems
+              or networks;
+            </li>
+            <li>Not interfere with or disrupt the operation of the Service;</li>
+            <li>
+              Not use automated tools (such as bots, crawlers, etc.) to access
+              the Service without our explicit permission;
+            </li>
+            <li>
+              Not copy, modify, distribute, sell, or rent any part of the
+              Service;
+            </li>
+            <li>Respect the rights and privacy of other users.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>4. 內容責任</h2>
+          <h3>4.1. 用戶內容</h3>
+          <p>
+            您對透過本服務上傳、發布或傳輸的所有內容（包括但不限於文字、圖片、影片等）負全部責任。您保證您擁有或已獲得必要的權利和許可來使用、上傳和分享這些內容。
+          </p>
+
+          <h3>4.2. 內容審查</h3>
+          <p>
+            我們保留審查、編輯、刪除或拒絕發布任何違反本條款或我們認為不當的內容的權利，但我們沒有義務這樣做。
+          </p>
+
+          <h3>4.3. 內容授權</h3>
+          <p>
+            透過上傳內容到本服務，您授予我們使用、儲存、處理和顯示這些內容的權利，僅限於提供和改進本服務的目的。
+          </p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>4. Content Responsibility</h2>
+          <h3>4.1. User Content</h3>
+          <p>
+            You are solely responsible for all content (including but not
+            limited to text, images, videos, etc.) that you upload, post, or
+            transmit through the Service. You warrant that you own or have
+            obtained the necessary rights and permissions to use, upload, and
+            share such content.
+          </p>
+
+          <h3>4.2. Content Review</h3>
+          <p>
+            We reserve the right to review, edit, delete, or refuse to publish
+            any content that violates these Terms or that we deem inappropriate,
+            but we are not obligated to do so.
+          </p>
+
+          <h3>4.3. Content License</h3>
+          <p>
+            By uploading content to the Service, you grant us the right to use,
+            store, process, and display such content solely for the purpose of
+            providing and improving the Service.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>5. 智慧財產權</h2>
+          <p>
+            本應用程式的所有智慧財產權（包括但不限於軟體、設計、商標、版權等）均歸開發者所有。未經開發者明確書面許可，您不得複製、修改、分發、出售或出租本應用程式的任何部分。
+          </p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>5. Intellectual Property</h2>
+          <p>
+            All intellectual property rights (including but not limited to
+            software, design, trademarks, copyrights, etc.) of the Application
+            belong to the Developer. You may not copy, modify, distribute, sell,
+            or rent any part of the Application without the Developer's explicit
+            written permission.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>6. 服務變更和終止</h2>
+          <h3>6.1. 服務變更</h3>
+          <p>
+            我們保留隨時修改、暫停或終止本服務或其任何部分的權利，無需事先通知。我們可能會定期更新本應用程式以添加新功能或修復錯誤。
+          </p>
+
+          <h3>6.2. 服務終止</h3>
+          <p>
+            如果您違反本條款，我們保留立即終止或暫停您對本服務的存取權利的權利，無需事先通知。
+          </p>
+
+          <h3>6.3. 終止後的資料處理</h3>
+          <p>
+            在服務終止後，我們將根據隱私政策處理您的資料。您可以在終止前導出您的資料。
+          </p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>6. Service Changes and Termination</h2>
+          <h3>6.1. Service Changes</h3>
+          <p>
+            We reserve the right to modify, suspend, or terminate the Service or
+            any part thereof at any time without prior notice. We may
+            periodically update the Application to add new features or fix bugs.
+          </p>
+
+          <h3>6.2. Service Termination</h3>
+          <p>
+            If you violate these Terms, we reserve the right to immediately
+            terminate or suspend your access to the Service without prior
+            notice.
+          </p>
+
+          <h3>6.3. Data Processing After Termination</h3>
+          <p>
+            After service termination, we will process your data in accordance
+            with the Privacy Policy. You may export your data before
+            termination.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>7. 免責聲明</h2>
+          <p>本服務按「現狀」提供，不提供任何明示或暗示的保證。我們不保證：</p>
+          <ul>
+            <li>本服務將不間斷、及時、安全或無錯誤；</li>
+            <li>本服務的結果將準確或可靠；</li>
+            <li>本服務中的任何缺陷或錯誤將被修正；</li>
+            <li>本服務將滿足您的特定需求。</li>
+          </ul>
+          <p>您使用本服務的風險由您自行承擔。</p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>7. Disclaimer</h2>
+          <p>
+            The Service is provided "as is" without any express or implied
+            warranties. We do not warrant that:
+          </p>
+          <ul>
+            <li>
+              The Service will be uninterrupted, timely, secure, or error-free;
+            </li>
+            <li>
+              The results obtained from the Service will be accurate or
+              reliable;
+            </li>
+            <li>Any defects or errors in the Service will be corrected;</li>
+            <li>The Service will meet your specific requirements.</li>
+          </ul>
+          <p>You use the Service at your own risk.</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>8. 責任限制</h2>
+          <p>
+            在法律允許的最大範圍內，開發者對因使用或無法使用本服務而產生的任何直接、間接、偶然、特殊、懲罰性或後果性損害不承擔責任，包括但不限於：
+          </p>
+          <ul>
+            <li>資料遺失或損壞；</li>
+            <li>利潤損失；</li>
+            <li>業務中斷；</li>
+            <li>信譽損失；</li>
+            <li>其他無形損失。</li>
+          </ul>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>8. Limitation of Liability</h2>
+          <p>
+            To the maximum extent permitted by law, the Developer shall not be
+            liable for any direct, indirect, incidental, special, punitive, or
+            consequential damages arising from the use or inability to use the
+            Service, including but not limited to:
+          </p>
+          <ul>
+            <li>Data loss or corruption;</li>
+            <li>Loss of profits;</li>
+            <li>Business interruption;</li>
+            <li>Loss of reputation;</li>
+            <li>Other intangible losses.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>9. 第三方服務</h2>
+          <p>
+            本服務使用第三方服務（如 Supabase、Google、Apple
+            等）來提供功能。這些第三方服務有其自己的使用條款和隱私政策。您使用這些第三方服務即表示您同意遵守其各自的條款和政策。
+          </p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>9. Third-Party Services</h2>
+          <p>
+            The Service uses third-party services (such as Supabase, Google,
+            Apple, etc.) to provide functionality. These third-party services
+            have their own terms of service and privacy policies. By using these
+            third-party services, you agree to comply with their respective
+            terms and policies.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>10. 條款修訂</h2>
+          <p>
+            我們保留隨時修訂本條款的權利。修訂後的條款將在我們發布後生效。我們將在應用程式或網站上發布重要修訂的通知。繼續使用本服務即表示您接受修訂後的條款。
+          </p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>10. Terms Revision</h2>
+          <p>
+            We reserve the right to revise these Terms at any time. Revised
+            terms will take effect after we publish them. We will post notices
+            of significant revisions in the Application or on our website.
+            Continued use of the Service indicates your acceptance of the
+            revised terms.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>11. 適用法律和管轄權</h2>
+          <p>
+            本條款受適用法律管轄。如有任何爭議，應透過友好協商解決；如協商不成，應提交有管轄權的法院解決。
+          </p>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>11. Governing Law and Jurisdiction</h2>
+          <p>
+            These Terms are governed by applicable law. Any disputes shall be
+            resolved through friendly consultation; if consultation fails,
+            disputes shall be submitted to a court with jurisdiction for
+            resolution.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="lang-section lang-zh">
+          <h2>12. 聯絡我們</h2>
+          <p>如有任何關於本條款的問題或詢問，請透過以下方式與我們聯繫：</p>
+          <div class="contact-info">
+            <p><strong>開發者：</strong>AsiaDJ（獨立開發者）</p>
+            <p>
+              <strong>聯絡信箱：</strong
+              ><a href="mailto:byasiadj@gmail.com">byasiadj@gmail.com</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="lang-divider"></div>
+
+        <div class="lang-section lang-en">
+          <h2>12. Contact Us</h2>
+          <p>
+            If you have any questions or inquiries regarding these Terms, please
+            contact us through the following:
+          </p>
+          <div class="contact-info">
+            <p><strong>Developer:</strong>AsiaDJ (Independent Developer)</p>
+            <p>
+              <strong>Contact Email:</strong
+              ><a href="mailto:byasiadj@gmail.com">byasiadj@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="effective-date">
+        <p class="lang-zh">建立日期：2024年12月</p>
+        <p class="lang-en">Date of establishment: December 2024</p>
+      </div>
+    </div>
+
+    <script>
+      function setLanguageDisplay(isEnglish) {
+        const allZh = document.querySelectorAll(".lang-zh");
+        const allEn = document.querySelectorAll(".lang-en");
+
+        allZh.forEach(function (el) {
+          const isInButton = el.closest(".language-toggle");
+          if (isInButton) {
+            el.style.display = isEnglish ? "none" : "inline";
+          } else {
+            const tagName = el.tagName.toLowerCase();
+            if (tagName === "span" || tagName === "a" || tagName === "p") {
+              el.style.display = "block";
+            } else if (tagName === "div") {
+              el.style.display = "block";
+            } else {
+              el.style.display = "block";
+            }
+          }
+        });
+
+        allEn.forEach(function (el) {
+          const isInButton = el.closest(".language-toggle");
+          if (isInButton) {
+            el.style.display = isEnglish ? "inline" : "none";
+          } else {
+            if (isEnglish) {
+              const tagName = el.tagName.toLowerCase();
+              if (tagName === "span" || tagName === "a" || tagName === "p") {
+                el.style.display = "block";
+              } else if (tagName === "div") {
+                el.style.display = "block";
+              } else {
+                el.style.display = "block";
+              }
+            } else {
+              el.style.display = "none";
+            }
+          }
+        });
+      }
+
+      function toggleLanguage() {
+        const body = document.body;
+        const isEnglish = body.classList.contains("lang-en");
+
+        if (isEnglish) {
+          body.classList.remove("lang-en");
+          setLanguageDisplay(false);
+        } else {
+          body.classList.add("lang-en");
+          setLanguageDisplay(true);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const body = document.body;
+        if (body.classList.contains("lang-en")) {
+          body.classList.remove("lang-en");
+        }
+        setLanguageDisplay(false);
+      });
+
+      window.addEventListener("scroll", function () {
+        const backToTopButton = document.querySelector(".back-to-top");
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("show");
+        } else {
+          backToTopButton.classList.remove("show");
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
