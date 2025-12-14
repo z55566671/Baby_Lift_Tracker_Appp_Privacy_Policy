@@ -419,7 +419,7 @@
         }
       }
 
-      /* 隱藏/顯示語言內容 */
+      /* 隱藏/顯示語言內容 - 修復版本 */
       .lang-zh {
         display: block;
       }
@@ -428,12 +428,13 @@
         display: none;
       }
 
+      /* 當 body 有 lang-en class 時，顯示英文，隱藏中文 */
       body.lang-en .lang-zh {
-        display: none;
+        display: none !important;
       }
 
       body.lang-en .lang-en {
-        display: block;
+        display: block !important;
       }
 
       /* 強調文字 */
@@ -481,7 +482,7 @@
   </head>
   <body>
     <!-- 語言切換按鈕 -->
-    <button class="language-toggle" onclick="toggleLanguage()">
+    <button class="language-toggle" id="langToggle" onclick="toggleLanguage()">
       <span class="lang-zh">English</span>
       <span class="lang-en">中文</span>
     </button>
@@ -970,9 +971,18 @@
     </div>
 
     <script>
-      // 語言切換功能
+      // 語言切換功能 - 修復版本
       function toggleLanguage() {
-        document.body.classList.toggle("lang-en");
+        const body = document.body;
+        const isEnglish = body.classList.contains("lang-en");
+
+        if (isEnglish) {
+          // 切換到中文
+          body.classList.remove("lang-en");
+        } else {
+          // 切換到英文
+          body.classList.add("lang-en");
+        }
       }
 
       // 返回頂部功能
