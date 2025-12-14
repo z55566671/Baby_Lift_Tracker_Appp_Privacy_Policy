@@ -420,12 +420,13 @@
       }
 
       /* 隱藏/顯示語言內容 - 修復版本 */
+      /* 默認狀態：顯示中文，隱藏英文 */
       .lang-zh {
-        display: block;
+        display: block !important;
       }
 
       .lang-en {
-        display: none;
+        display: none !important;
       }
 
       /* 當 body 有 lang-en class 時，顯示英文，隱藏中文 */
@@ -435,6 +436,23 @@
 
       body.lang-en .lang-en {
         display: block !important;
+      }
+
+      /* 確保按鈕文字也能正確切換 */
+      .language-toggle .lang-zh {
+        display: inline;
+      }
+
+      .language-toggle .lang-en {
+        display: none;
+      }
+
+      body.lang-en .language-toggle .lang-zh {
+        display: none !important;
+      }
+
+      body.lang-en .language-toggle .lang-en {
+        display: inline !important;
       }
 
       /* 強調文字 */
@@ -976,14 +994,44 @@
         const body = document.body;
         const isEnglish = body.classList.contains("lang-en");
 
+        console.log("切換語言前，isEnglish:", isEnglish);
+
         if (isEnglish) {
           // 切換到中文
           body.classList.remove("lang-en");
+          console.log("已切換到中文");
         } else {
           // 切換到英文
           body.classList.add("lang-en");
+          console.log("已切換到英文");
         }
+
+        // 強制重新計算樣式
+        body.offsetHeight; // 觸發重排
+
+        // 驗證切換結果
+        const allZh = document.querySelectorAll(".lang-zh");
+        const allEn = document.querySelectorAll(".lang-en");
+        console.log(
+          "中文元素數量:",
+          allZh.length,
+          "英文元素數量:",
+          allEn.length
+        );
+        console.log(
+          "body 是否有 lang-en class:",
+          body.classList.contains("lang-en")
+        );
       }
+
+      // 頁面載入時確保初始狀態
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("頁面載入完成，初始語言：中文");
+        const body = document.body;
+        if (body.classList.contains("lang-en")) {
+          body.classList.remove("lang-en");
+        }
+      });
 
       // 返回頂部功能
       window.addEventListener("scroll", function () {
