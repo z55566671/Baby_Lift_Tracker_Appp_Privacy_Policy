@@ -421,11 +421,11 @@
 
       /* 隱藏/顯示語言內容 - 修復版本 */
       /* 默認狀態：顯示中文，隱藏英文 */
-      .lang-zh {
+      body:not(.lang-en) .lang-zh {
         display: block !important;
       }
 
-      .lang-en {
+      body:not(.lang-en) .lang-en {
         display: none !important;
       }
 
@@ -439,12 +439,12 @@
       }
 
       /* 確保按鈕文字也能正確切換 */
-      .language-toggle .lang-zh {
-        display: inline;
+      body:not(.lang-en) .language-toggle .lang-zh {
+        display: inline !important;
       }
 
-      .language-toggle .lang-en {
-        display: none;
+      body:not(.lang-en) .language-toggle .lang-en {
+        display: none !important;
       }
 
       body.lang-en .language-toggle .lang-zh {
@@ -989,7 +989,59 @@
     </div>
 
     <script>
-      // 語言切換功能 - 修復版本
+      // 設置語言顯示狀態的輔助函數
+      function setLanguageDisplay(isEnglish) {
+        const allZh = document.querySelectorAll(".lang-zh");
+        const allEn = document.querySelectorAll(".lang-en");
+
+        allZh.forEach(function (el) {
+          const isInButton = el.closest(".language-toggle");
+          if (isInButton) {
+            // 按鈕內的文字
+            el.style.display = isEnglish ? "none" : "inline";
+          } else {
+            // 內容區域
+            if (isEnglish) {
+              el.style.display = "none";
+            } else {
+              // 根據元素類型設置顯示方式
+              const tagName = el.tagName.toLowerCase();
+              if (tagName === "span" || tagName === "a" || tagName === "p") {
+                el.style.display = "block";
+              } else if (tagName === "div") {
+                el.style.display = "block";
+              } else {
+                el.style.display = "block";
+              }
+            }
+          }
+        });
+
+        allEn.forEach(function (el) {
+          const isInButton = el.closest(".language-toggle");
+          if (isInButton) {
+            // 按鈕內的文字
+            el.style.display = isEnglish ? "inline" : "none";
+          } else {
+            // 內容區域
+            if (isEnglish) {
+              // 根據元素類型設置顯示方式
+              const tagName = el.tagName.toLowerCase();
+              if (tagName === "span" || tagName === "a" || tagName === "p") {
+                el.style.display = "block";
+              } else if (tagName === "div") {
+                el.style.display = "block";
+              } else {
+                el.style.display = "block";
+              }
+            } else {
+              el.style.display = "none";
+            }
+          }
+        });
+      }
+
+      // 語言切換功能 - 修復版本（直接控制顯示）
       function toggleLanguage() {
         const body = document.body;
         const isEnglish = body.classList.contains("lang-en");
@@ -999,15 +1051,14 @@
         if (isEnglish) {
           // 切換到中文
           body.classList.remove("lang-en");
+          setLanguageDisplay(false);
           console.log("已切換到中文");
         } else {
           // 切換到英文
           body.classList.add("lang-en");
+          setLanguageDisplay(true);
           console.log("已切換到英文");
         }
-
-        // 強制重新計算樣式
-        body.offsetHeight; // 觸發重排
 
         // 驗證切換結果
         const allZh = document.querySelectorAll(".lang-zh");
@@ -1031,6 +1082,8 @@
         if (body.classList.contains("lang-en")) {
           body.classList.remove("lang-en");
         }
+        // 初始化顯示狀態
+        setLanguageDisplay(false);
       });
 
       // 返回頂部功能
